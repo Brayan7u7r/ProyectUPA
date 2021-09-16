@@ -109,6 +109,7 @@ institucion_posgrado        string(50) not null
 ciudad_posgrado             string(50) not null
 año_posgrado                string(4) not null
 titulo_posgrado             string(20) not null
+Fk_TblHojaDeVida            integer(11) foreign key not null
 
 d_TblPregado
 Oid                         integer(11) autoincrementable primary key not null

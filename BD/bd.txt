@@ -1,0 +1,440 @@
+
+
+
+
+TblPersona
+Oid                   integer(11) autoincrementable primary key not null
+tipo_doc              string(30) not null
+Documento             string(20) not null
+Nombres               string(50) not null
+Primer_apellido       string(20) not null
+Segundo_apellido      string(20) null
+Dirección             string(255) null
+Telefono              string(35) null
+Sexo                  string(1) not null
+Vinculacion           string(255) not null
+FechaExpedicion       string(10) not null
+NivelAcademico        string(255) null
+FechaIngreso          string(10) not null
+Cargo                 string(255) not null
+EPS                   string(20) not null
+Pension               string(30) null
+ARL                   string(30) null
+CAJA                  string(30) null
+Sindicato             string(30) null
+Estado                string(7) not null
+Finca                 string(30) not null
+
+-------------
+tbl_Finca
+ibm                   string(6) not null primary key
+nombre                string(30) not null
+
+
+*************// Modulo SELECCION //************
+
+************* ASPIRANTES ************
+TblAspirantes
+Oid
+Nombre_completo
+Documento
+lugar_expe
+fecha_nacimiento
+fk_d_departamento
+fk_d_municipio
+direccion
+correo
+Telefono
+estado_civil
+
+************* FIN ASPIRANTES ************
+
+
+
+*************// FIN Modulo SELECCION //************
+
+*************// Modulo SST //************
+
+************* calificaciones ************
+TblCalificaciones
+Oid                   integer(11) autoincrementable primary key not null
+Fk_tbl_Persona        integer(11) index foreign key not null
+Fk_d_Origen           integer(3) index foreign key not null
+Fk_d_Calificador      integer(3) index foreign key not null
+PCL                   double(5) not null
+FechaCalificacion     date not null
+Concepto_reha         string(50) not null
+Fecha_estruc          date not null
+PCL_ENFIRME           string(2) not null
+fK_finca              string(6) index foreign key not null
+FechaAT               string(10) null
+Observacion           string(255) null
+
+-------------
+//Dimensiones 
+-------------
+d_TblOrigen
+Oid                   integer(3) autoincrementable primary key
+Descripcion           string(40) not null
+
+-------------
+d_TblCalificador
+Oid                   integer(3) autoincrementable primary key
+Descripcion           string(40) not null
+
+************* fin calificaciones ************
+
+************* enfermedades ************
+TblEnfermedadesLaborales
+Oid                  integer(11) autoincrementable primary key
+Fk_tbl_Persona       integer(11) index foreign key not null
+Fecha_siniestro      date not null
+Fecha_calificacion   date not null
+Fk_tbl_DIAGX         integer(6) index foreign key not null
+Fk_d_Estado          integer(2) index foreign key not null
+Fk_d_partes_cuerpo   integer(4) index foreign key not null
+fK_tbl_Calificaciones integer(11) index foreign key not null
+fK_finca             string(6) index foreign key not null
+
+-------------
+TblInvestigaciones_emf
+Oid                  integer(11) autoincrementable primary key
+fk_tbl_emfermedad    integer(11) index foreign key not null
+FechaInves           date not null
+Investigador         string(70) not null
+Empresa_investigador string(70) not null
+
+-------------
+Invest_X_TipoInter_emf
+Oid                  integer(11) autoincrementable primary key
+Fk_tbl_Invest        integer(11) index foreign key not null
+Fk_d_TipoInter       integer(3) index foreign key not null
+Observacion          string(255) null
+
+-------------
+//Dimensiones
+------------- 
+d_tipo_intervencion
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(15) not null
+
+------------- 
+d_TblParte_cuerpo
+Oid                  integer(4) autoincrementable primary key
+Descripcion          string(50) not null
+
+************* fin enfermedades ************
+
+************* diagnostico ************
+tbl_diagx
+Oid                  integer(6) autoincrementable primary key
+CODIGO               string(6) not null
+DIagnostico          string(150) not null
+Fk_d_grupo           integer(3) index foreign key not null
+Fk_d_riesgo          integer(3) index foreign key not null
+Fk_d_Segmento        integer(3) index foreign key not null
+
+-------------
+//Dimensiones
+-------------
+d_TblSegmento
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(150) not null
+
+-------------
+d_TblGrupo
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(150) not null
+
+-------------
+d_TblRiesgo
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(150) not null
+
+************* fin diagnostico ************
+
+************* reintegros ************
+
+-------------
+TblReintegros
+Oid                  integer(11) autoincrementable primary key
+Fk_tbl_Persona       integer(11) index foreign key not null
+Fk_tbl_Finca         string(6) index foreign key not null
+Fk_d_Causa           integer(3) index foreign key not null
+Fecha                date not null
+Fk_d_Mod_puesto      integer(3) index foreign key not null
+Fk_d_caracter        integer(3) index foreign key not null
+Duracion             string(11) not null
+FechaFinalizacion    date not null
+NombreMedico         string(150) not null
+Especialidad         string(150) not null
+Entidad              string(150) not null
+Fk_tbl_Calificacion  integer(11) index foreign key not null
+Fk_d_Estado          integer(2) index foreign key not null
+Productividad        string(2) not null
+
+------------- esta está pendiente
+tbl_seguimiento_x_reintegros
+Oid                  integer autoincrementable primary key
+fK_tbl_reintegros    integer(11) index foreign key not null
+Fecha                date not null
+fk_d_causa           integer(3) index foreign key not null
+Fk_d_Mod_puesto      integer(3) index foreign key not null
+Duracion             string(11) not null
+FechaFinalizacion    date not null
+NombreMedico         string(150) not null
+Especialidad         string(150) not null
+Entidad              string(150) not null
+frecuencia_pausa     string(150) not null
+Observacion          string(255) not null
+
+
+
+-------------
+tbl_Reintegros_X_Labores
+Oid                  integer(11) autoincrementable primary key
+Fk_tbl_Reintegro     integer(11) index foreign key not null
+Fk_d_Labores         integer(3) index foreign key not null
+tipo (r/s)           string(1) not null
+
+-------------
+tbl_Reintegros_X_DiagX
+Oid                  integer(11) autoincrementable primary key
+Fk_tbl_Reintegro     integer(11) index foreign key not null
+Fk_tbl_Diagx         integer(6) index foreign key not null
+tipo (r/s)           string(1) not null
+Observacion          string(255) not null
+
+
+-------------
+tbl_cierre_reintegros
+Oid                  integer(11) autoincrementable primary key
+fK_tbl_reintegros    integer(11) index foreign key not null
+fecha_cierre         date not null
+Fk_tbl_Finca         string(6) index foreign key not null
+fk_d_tipo_cierre     integer(2) index foreign key not null
+NombreMedico         string(60) not null
+Especialidad         string(150) not null
+Entidad              string(50) not null
+analista_sst         string(60) not null
+Observacion          string(255) not null
+
+-------------
+//Dimensiones
+-------------
+d_caracter
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(20) not null
+
+-------------
+d_mod_puesto
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(20) not null
+
+-------------
+d_Tblcausas
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+
+-------------
+d_tblLabores
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+Ubicacion            string(20) not null
+
+d_tipo_cierre
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+
+
+************* fin reintegros ************
+
+
+************* Ausentismo ************
+
+tbl_ausentismo
+Oid                  integer(11) autoincrementable primary key
+fecha_registro       date not null
+fk_d_tipo_aus        integer(3) index foreign key not null
+Fk_tbl_Persona       integer(11) index foreign key not null
+Fk_tbl_Finca         string(6) index foreign key not null
+dias                 integer(3) not null
+prorroga             string(2) not null
+Fk_tbl_DIAGX         string(6) index foreign key not null
+fecha_inicio         date not null
+fecha_fin            date not null
+cod_inca             string(15) not null
+Observacion          string(255) not null
+
+-------------
+//Dimensiones
+-------------
+d_tipo_aus
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+sigla                string(5) not null
+modi_user            string(5) not null
+modi_admin           string(5) not null
+
+************* fin Ausentismo ************
+
+
+************* personal apoyo ************
+
+tbl_personal_apoyo
+Oid                  integer(6) autoincrementable primary key
+Fk_tbl_Persona       integer(11) index foreign key not null
+Fk_tbl_Finca         string(6) index foreign key not null
+fk_d_perfil_apoyo    integer(3) index foreign key not null
+Fk_d_Estado          integer(3) index foreign key not null
+
+-------------
+//Dimensiones
+-------------
+d_tipo_aus
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+fk_d_apoyo           integer(3) index foreign key not null
+
+-------------
+d_apoyo
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+
+
+************* fin personal apoyo ************
+
+
+************* accidentes ************
+
+tbl_accidente
+Oid                  integer(11) autoincrementable primary key
+Fk_tbl_Persona       integer(11) index foreign key not null
+fecha_at             date not null
+fk_d_jor_lab         integer(2) index foreign key not null 
+lab_hab (s/n)        string(2) not null 
+fk_d_labor_habitual  integer(2) index foreign key not null 
+hora_at              string(7) not null
+fk_d_tipo_at         integer(2) index foreign key not null 
+mortal (s/n)         string(2) not null 
+fk_d_municipio       integer(3) index foreign key not null 
+fk_d_zona_at         integer(2) index foreign key not null 
+at_en_empresa (s/n)  string(2) not null
+fk_d_lugar_at        integer(3) index foreign key not null 
+otro_lugar_at        string(50) not null
+descripcion_at       string(500) not null
+fk_d_mecanistmo_at   integer(3) index foreign key not null 
+otro_mecanismo_at    string(50) not null
+fk_d_tipo_lesion     integer(4) index foreign key not null 
+fk_tbl_usuario       integer(2) index foreign key not null 
+fk_d_parte_afectada  integer(5) index foreign key not null 
+fk_fuente_lesion     integer(5) index foreign key not null 
+
+-------------
+tbl_Investigacion_x_at
+Oid                  integer(11) autoincrementable primary key
+fk_tbl_accidente     integer(11) index foreign key not null
+fk_d_tipo_causa      integer(2) index foreign key not null
+causa                string(255) not null
+fk_d_tipo_control    integer(2) index foreign key not null
+control              string(255) not null
+fecha_ejecucion      date not null
+fecha_verificacion   date not null
+responsable          string(50) not null
+
+-------------
+tbl_testigo
+Oid                  integer(11) autoincrementable primary key
+fk_tbl_accidente     integer(11) index foreign key not null
+tipo_doc             string(2)
+Documento            integer(15) not null
+nombre               string(50) not null
+Cargo                string(50) not null
+
+
+
+-------------
+//Dimensiones
+-------------
+//---// at //---//
+d_jordana_laboral
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(10) not null
+
+-------------
+d_labor_habitual
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(100) not null
+
+-------------
+d_tipo_at
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(20) not null
+
+-------------
+d_zona_at
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(255) not null
+
+-------------
+d_lugar_o_at
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+
+-------------
+d_mecanistmo_at
+Oid                  integer(3) autoincrementable primary key
+Descripcion          string(50) not null
+
+-------------
+d_tipo_lesion
+Oid                  integer(4) autoincrementable primary key
+Descripcion          string(50) not null
+
+-------------
+d_parte_afectada
+Oid                  integer(5) autoincrementable primary key
+Descripcion          string(30) not null
+
+-------------
+fuente_lesion
+Oid                  integer(5) autoincrementable primary key
+Descripcion          string(50) not null
+
+//---// investigacion_at //---//
+d_tipo_control
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(255) not null
+
+-------------
+d_tipo_causa
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(255) not null
+
+************* fin accidentes ************
+
+//Dimensiones generales
+
+d_RazonSocial
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(255) not null
+
+d_TblEstado
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(255) not null
+
+-------------
+d_municipio
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(30) not null
+
+-------------
+d_departamento
+Oid                  integer(2) autoincrementable primary key
+Descripcion          string(30) not null
+
+
+
+
+
+

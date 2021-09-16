@@ -31,20 +31,107 @@ nombre                string(30) not null
 
 ************* ASPIRANTES ************
 TblAspirantes
-Oid
-Nombre_completo
-Documento
-lugar_expe
-fecha_nacimiento
-fk_d_departamento
-fk_d_municipio
-direccion
-correo
-Telefono
-estado_civil
+Oid                 integer(11) primary key not null
+Fecha_postulacion   date not null
+Nombre_completo     string(90) not null
+Documento           string(20) not null
+lugar_expe          string(250) not null
+fecha_expe          date not null
+fecha_nacimiento    date not null
+fk_d_municipio      integer(2) not null
+direccion           string(255) not null
+correo              string(50) not null
+Telefono            string(11) not null
+Fk_estado_civil     integer(2) foreign key not null
+sexo                string(2) not null
 
 ************* FIN ASPIRANTES ************
 
+************* Hoja de vida **************
+TblHojaDeVida
+Oid                         integer(11) autoincrementable primary key not null
+Fk_tbl_Persona              integer(11) primary key not null
+institucion_bachiller       string(50) not null
+ciudad_bachiller            string(50) not null
+año_bachiller               string(4) not null
+tipo_titulo_bachiller       string(20) not null
+Nombre_completo_padre       string(90) not null
+Nombre_completo_madre       string(90) not null
+Nombre_completo_conyugue    string(90) not null
+edad_padre                  string(2) not null
+edad_madre                  string(2) not null
+edad_conyugue               string(2) not null
+nivel_academico_padre       string(20) not null
+nivel_academico_madre       string(20) not null
+nivel_academico_conyugue    string(20) not null
+ocupacion_padre             string(20) not null
+ocupacion_madre             string(20) not null
+ocupacion_conyugue          string(20) not null
+dependencia_padre           string(2) not null
+dependencia_madre           string(2) not null
+dependencia_conyugue        string(2) not null
+pregunta_general_familia    string(255) not null
+pregunta_general_centrotrabajo string(255) not null
+empresa_actual              string(100) not null
+ciudad_actual               string(50) not null
+nombre_jefe_actual          string(90) not null
+cargo_jefe_actual           string(20) not null
+telefono_jefe_actual        string(11) not null
+tiempo_laborado_actual      string(10) not null
+cargo_actual                string(20) not null
+salario_actual              integer(8) not null
+motivo_retiro_actual        string(255) not null
+empresa_anterior            string(100) not null
+ciudad_anterior             string(50) not null
+nombre_jefe_anterior        string(90) not null
+cargo_jefe_anterior         string(20) not null
+telefono_jefe_anterior      string(11) not null
+tiempo_laborado_anterior    string(10) not null
+cargo_anterior              string(20) not null
+salario_anterior            integer(8) not null
+motivo_retiro_anterior      string(255) not null
+empresa_trasanterior        string(100) not null
+ciudad_trasanterior         string(50) not null
+nombre_jefe_trasanterior    string(90) not null
+cargo_jefe_trasanterior     string(20) not null
+telefono_jefe_trasanterior  string(11) not null
+tiempo_laborado_trasanteriorstring(10) not null
+cargo_trasanterior          string(20) not null
+salario_trasanterior        integer(8) not null
+motivo_retiro_trasanterior  string(255) not null
+pregunta_general_upa
+
+
+//Dimensiones
+d_TblPosgrado
+Oid                         integer(11) autoincrementable primary key not null
+institucion_posgrado        string(50) not null
+ciudad_posgrado             string(50) not null
+año_posgrado                string(4) not null
+titulo_posgrado             string(20) not null
+
+d_TblPregado
+Oid                         integer(11) autoincrementable primary key not null
+institucion_pregado         string(50) not null
+ciudad_pregado              string(50) not null
+año_pregrado                string(4) not null
+titulo_pregado              string(20) not null
+Fk_TblHojaDeVida            integer(11) foreign key not null
+
+d_TblHijo
+Oid                         integer(11) autoincrementable primary key not null
+nombre_completo             string(90) not null
+edad                        string(2) not null
+nivel_academico             string(20) not null
+ocupacion                   string(50) not null
+dependencia_economica       string(2) // si o no not null
+Fk_TblAspirantes            integer(11) foreign key not null
+
+d_TblCursos
+Oid                         integer(11) autoincrementable primary key not null 
+Descripcion                 string(255) not null
+Fk_TblHojaDeVida            integer(11) foreign key not null
+*************// fin hoja de vida //*********
 
 
 *************// FIN Modulo SELECCION //************

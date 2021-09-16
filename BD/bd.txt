@@ -1,7 +1,3 @@
-
-
-
-
 TblPersona
 Oid                   integer(11) autoincrementable primary key not null
 tipo_doc              string(30) not null
@@ -187,7 +183,6 @@ Especialidad         string(150) not null
 Entidad              string(150) not null
 frecuencia_pausa     string(150) not null
 Observacion          string(255) not null
-
 
 
 -------------

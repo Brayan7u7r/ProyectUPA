@@ -1,3 +1,14 @@
+TblRol
+Oid                 integer(3) autoincrementable primary key not null
+Descripcion         string(50)
+
+TblUsuario
+Oid                 integer(11) autoincrementable primary key not null
+Usuario             string(25) not null
+Contrasenia         string(255) not null
+Correo              string(50) not null
+Fk_d_razon_social   integer(2) foreign key not null
+
 TblPersona
 Oid                   integer(11) autoincrementable primary key not null
 tipo_doc              string(30) not null
@@ -101,6 +112,21 @@ salario_trasanterior        integer(8) not null
 motivo_retiro_trasanterior  string(255) not null
 pregunta_general_upa
 
+TblVacante
+Oid                         integer(11) autoincrementable primary key not null
+fecha_fin                   date
+Cargo                       string(25) not null
+img_referencia              string(100) not null
+lugar_vacante               string(50) not null
+descripcion_requisitos      string(255) not null
+Fk_TblUsuario               integer(11) foreign key not null
+
+TblPostulacion
+Oid                         integer(11) autoincrementable primary key not null
+Fehca_postulacion           date
+Fk_TblAspirantes            integer(11) foreign key not null
+Fk_TblVacante               integer(11) foreign key not null
+Estado                      string(50) not null
 
 //Dimensiones
 d_TblPosgrado

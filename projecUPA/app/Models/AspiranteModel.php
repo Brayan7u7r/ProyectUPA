@@ -36,7 +36,7 @@ class AspiranteModel extends Model
 
     protected $validationMessages = [
         'Asp_nombrecompleto'    => [
-            'alpha_space' => 'Debes ingresar un nombre completo valido'
+            'alpha_space' => 'Debes ingresar un nombre valido'
         ]
     ];
 

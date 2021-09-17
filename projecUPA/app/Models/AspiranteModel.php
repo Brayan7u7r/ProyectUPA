@@ -23,17 +23,17 @@ class AspiranteModel extends Model
 
     protected $validationRules  = [
         'Asp_nombrecompleto'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_documento'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_fechanacimiento'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_fechaexpedicion'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_direccion'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_correo'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_correo'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
+        'Asp_documento'    => 'required|alpha_space|min_lenght[5]|max_lenght[20]',
+        'Asp_lugarexpedicion'    => 'required|alpha_space|max_lenght[150]',
+        'Asp_fechanacimiento'    => 'required|',
+        'Asp_fechaexpedicion'    => 'required|',
+        'Asp_direccion'    => 'required|alpha_space|min_lenght[10]|max_lenght[150]',
+        'Asp_correo'    => 'required|valid_email',
         'Asp_telefono'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
         'Asp_estadocivil'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_sexo'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]'
+        'Asp_sexo'    => 'required|alpha_space|min_lenght[1]|max_lenght[1]'
     ];
-
+   /* 
     protected $validationMessages = [
         'Asp_nombrecompleto'    => [
             'alpha_space' => 'Debes ingresar un nombre valido'
@@ -41,6 +41,7 @@ class AspiranteModel extends Model
     ];
 
     protected $skipValidation = false;
+    */
 
 }
 

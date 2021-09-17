@@ -35,8 +35,11 @@ $routes->get('/', 'Home::index');
 
 //http://localhost:8080/api
 $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
-    
     $routes->get('aspirantes','Aspirantes::index');
+    $routes->post('aspirantes/create','Aspirantes::create');
+    $routes->get('aspirantes/edit/(:num)','Aspirantes::edit/$1');
+    $routes->put('aspirantes/update/(:num)','Aspirantes::update/$1');
+    $routes->delete('aspirantes/delete/(:num)','Aspirante::delete/$1');
 });
 
 

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 17, 2021 at 05:17 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-09-2021 a las 14:58:12
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sara_app`
+-- Base de datos: `sara_app`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_apoyo`
+-- Estructura de tabla para la tabla `d_tbl_apoyo`
 --
 
 CREATE TABLE `d_tbl_apoyo` (
@@ -35,7 +36,7 @@ CREATE TABLE `d_tbl_apoyo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_calificador`
+-- Estructura de tabla para la tabla `d_tbl_calificador`
 --
 
 CREATE TABLE `d_tbl_calificador` (
@@ -46,7 +47,7 @@ CREATE TABLE `d_tbl_calificador` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_caracter`
+-- Estructura de tabla para la tabla `d_tbl_caracter`
 --
 
 CREATE TABLE `d_tbl_caracter` (
@@ -57,7 +58,7 @@ CREATE TABLE `d_tbl_caracter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_causas`
+-- Estructura de tabla para la tabla `d_tbl_causas`
 --
 
 CREATE TABLE `d_tbl_causas` (
@@ -68,7 +69,7 @@ CREATE TABLE `d_tbl_causas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_cursos`
+-- Estructura de tabla para la tabla `d_tbl_cursos`
 --
 
 CREATE TABLE `d_tbl_cursos` (
@@ -81,7 +82,7 @@ CREATE TABLE `d_tbl_cursos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_departamento`
+-- Estructura de tabla para la tabla `d_tbl_departamento`
 --
 
 CREATE TABLE `d_tbl_departamento` (
@@ -92,7 +93,7 @@ CREATE TABLE `d_tbl_departamento` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_estado`
+-- Estructura de tabla para la tabla `d_tbl_estado`
 --
 
 CREATE TABLE `d_tbl_estado` (
@@ -103,7 +104,7 @@ CREATE TABLE `d_tbl_estado` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_fuentelesion`
+-- Estructura de tabla para la tabla `d_tbl_fuentelesion`
 --
 
 CREATE TABLE `d_tbl_fuentelesion` (
@@ -114,7 +115,7 @@ CREATE TABLE `d_tbl_fuentelesion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_grupo`
+-- Estructura de tabla para la tabla `d_tbl_grupo`
 --
 
 CREATE TABLE `d_tbl_grupo` (
@@ -125,7 +126,7 @@ CREATE TABLE `d_tbl_grupo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_hijo`
+-- Estructura de tabla para la tabla `d_tbl_hijo`
 --
 
 CREATE TABLE `d_tbl_hijo` (
@@ -141,7 +142,7 @@ CREATE TABLE `d_tbl_hijo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_intervencion`
+-- Estructura de tabla para la tabla `d_tbl_intervencion`
 --
 
 CREATE TABLE `d_tbl_intervencion` (
@@ -152,7 +153,7 @@ CREATE TABLE `d_tbl_intervencion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_jornadalaboral`
+-- Estructura de tabla para la tabla `d_tbl_jornadalaboral`
 --
 
 CREATE TABLE `d_tbl_jornadalaboral` (
@@ -163,7 +164,7 @@ CREATE TABLE `d_tbl_jornadalaboral` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_labores`
+-- Estructura de tabla para la tabla `d_tbl_labores`
 --
 
 CREATE TABLE `d_tbl_labores` (
@@ -174,7 +175,7 @@ CREATE TABLE `d_tbl_labores` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_laborhabitual`
+-- Estructura de tabla para la tabla `d_tbl_laborhabitual`
 --
 
 CREATE TABLE `d_tbl_laborhabitual` (
@@ -185,7 +186,7 @@ CREATE TABLE `d_tbl_laborhabitual` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_lugarat`
+-- Estructura de tabla para la tabla `d_tbl_lugarat`
 --
 
 CREATE TABLE `d_tbl_lugarat` (
@@ -196,7 +197,7 @@ CREATE TABLE `d_tbl_lugarat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_mecanismoat`
+-- Estructura de tabla para la tabla `d_tbl_mecanismoat`
 --
 
 CREATE TABLE `d_tbl_mecanismoat` (
@@ -207,7 +208,7 @@ CREATE TABLE `d_tbl_mecanismoat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_modpuesto`
+-- Estructura de tabla para la tabla `d_tbl_modpuesto`
 --
 
 CREATE TABLE `d_tbl_modpuesto` (
@@ -218,7 +219,7 @@ CREATE TABLE `d_tbl_modpuesto` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_municipio`
+-- Estructura de tabla para la tabla `d_tbl_municipio`
 --
 
 CREATE TABLE `d_tbl_municipio` (
@@ -229,7 +230,7 @@ CREATE TABLE `d_tbl_municipio` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_origen`
+-- Estructura de tabla para la tabla `d_tbl_origen`
 --
 
 CREATE TABLE `d_tbl_origen` (
@@ -240,7 +241,7 @@ CREATE TABLE `d_tbl_origen` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_parteafectada`
+-- Estructura de tabla para la tabla `d_tbl_parteafectada`
 --
 
 CREATE TABLE `d_tbl_parteafectada` (
@@ -251,7 +252,7 @@ CREATE TABLE `d_tbl_parteafectada` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_partecuerpo`
+-- Estructura de tabla para la tabla `d_tbl_partecuerpo`
 --
 
 CREATE TABLE `d_tbl_partecuerpo` (
@@ -262,7 +263,7 @@ CREATE TABLE `d_tbl_partecuerpo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_perfilapoyo`
+-- Estructura de tabla para la tabla `d_tbl_perfilapoyo`
 --
 
 CREATE TABLE `d_tbl_perfilapoyo` (
@@ -274,7 +275,7 @@ CREATE TABLE `d_tbl_perfilapoyo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_posgrado`
+-- Estructura de tabla para la tabla `d_tbl_posgrado`
 --
 
 CREATE TABLE `d_tbl_posgrado` (
@@ -289,7 +290,7 @@ CREATE TABLE `d_tbl_posgrado` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_pregrado`
+-- Estructura de tabla para la tabla `d_tbl_pregrado`
 --
 
 CREATE TABLE `d_tbl_pregrado` (
@@ -304,7 +305,7 @@ CREATE TABLE `d_tbl_pregrado` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_razonsocial`
+-- Estructura de tabla para la tabla `d_tbl_razonsocial`
 --
 
 CREATE TABLE `d_tbl_razonsocial` (
@@ -315,7 +316,7 @@ CREATE TABLE `d_tbl_razonsocial` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_riesgo`
+-- Estructura de tabla para la tabla `d_tbl_riesgo`
 --
 
 CREATE TABLE `d_tbl_riesgo` (
@@ -326,7 +327,7 @@ CREATE TABLE `d_tbl_riesgo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_rol`
+-- Estructura de tabla para la tabla `d_tbl_rol`
 --
 
 CREATE TABLE `d_tbl_rol` (
@@ -337,7 +338,7 @@ CREATE TABLE `d_tbl_rol` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_segmento`
+-- Estructura de tabla para la tabla `d_tbl_segmento`
 --
 
 CREATE TABLE `d_tbl_segmento` (
@@ -348,7 +349,7 @@ CREATE TABLE `d_tbl_segmento` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_tipoat`
+-- Estructura de tabla para la tabla `d_tbl_tipoat`
 --
 
 CREATE TABLE `d_tbl_tipoat` (
@@ -359,7 +360,7 @@ CREATE TABLE `d_tbl_tipoat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_tipoaus`
+-- Estructura de tabla para la tabla `d_tbl_tipoaus`
 --
 
 CREATE TABLE `d_tbl_tipoaus` (
@@ -373,7 +374,7 @@ CREATE TABLE `d_tbl_tipoaus` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_tipocausa`
+-- Estructura de tabla para la tabla `d_tbl_tipocausa`
 --
 
 CREATE TABLE `d_tbl_tipocausa` (
@@ -384,7 +385,7 @@ CREATE TABLE `d_tbl_tipocausa` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_tipocierre`
+-- Estructura de tabla para la tabla `d_tbl_tipocierre`
 --
 
 CREATE TABLE `d_tbl_tipocierre` (
@@ -395,7 +396,7 @@ CREATE TABLE `d_tbl_tipocierre` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_tipocontrol`
+-- Estructura de tabla para la tabla `d_tbl_tipocontrol`
 --
 
 CREATE TABLE `d_tbl_tipocontrol` (
@@ -406,7 +407,7 @@ CREATE TABLE `d_tbl_tipocontrol` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_tipolesion`
+-- Estructura de tabla para la tabla `d_tbl_tipolesion`
 --
 
 CREATE TABLE `d_tbl_tipolesion` (
@@ -417,7 +418,7 @@ CREATE TABLE `d_tbl_tipolesion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `d_tbl_zonaat`
+-- Estructura de tabla para la tabla `d_tbl_zonaat`
 --
 
 CREATE TABLE `d_tbl_zonaat` (
@@ -428,7 +429,7 @@ CREATE TABLE `d_tbl_zonaat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_accidente`
+-- Estructura de tabla para la tabla `tbl_accidente`
 --
 
 CREATE TABLE `tbl_accidente` (
@@ -458,7 +459,7 @@ CREATE TABLE `tbl_accidente` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_aspirante`
+-- Estructura de tabla para la tabla `tbl_aspirante`
 --
 
 CREATE TABLE `tbl_aspirante` (
@@ -479,7 +480,7 @@ CREATE TABLE `tbl_aspirante` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_ausentismo`
+-- Estructura de tabla para la tabla `tbl_ausentismo`
 --
 
 CREATE TABLE `tbl_ausentismo` (
@@ -500,7 +501,7 @@ CREATE TABLE `tbl_ausentismo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_calificaciones`
+-- Estructura de tabla para la tabla `tbl_calificaciones`
 --
 
 CREATE TABLE `tbl_calificaciones` (
@@ -521,7 +522,7 @@ CREATE TABLE `tbl_calificaciones` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_centrotrabajo`
+-- Estructura de tabla para la tabla `tbl_centrotrabajo`
 --
 
 CREATE TABLE `tbl_centrotrabajo` (
@@ -532,7 +533,7 @@ CREATE TABLE `tbl_centrotrabajo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_cierre_reintegros`
+-- Estructura de tabla para la tabla `tbl_cierre_reintegros`
 --
 
 CREATE TABLE `tbl_cierre_reintegros` (
@@ -551,7 +552,7 @@ CREATE TABLE `tbl_cierre_reintegros` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_diagnostico`
+-- Estructura de tabla para la tabla `tbl_diagnostico`
 --
 
 CREATE TABLE `tbl_diagnostico` (
@@ -566,7 +567,7 @@ CREATE TABLE `tbl_diagnostico` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_enfermedadeslaborales`
+-- Estructura de tabla para la tabla `tbl_enfermedadeslaborales`
 --
 
 CREATE TABLE `tbl_enfermedadeslaborales` (
@@ -584,14 +585,14 @@ CREATE TABLE `tbl_enfermedadeslaborales` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_hojadevida`
+-- Estructura de tabla para la tabla `tbl_hojadevida`
 --
 
 CREATE TABLE `tbl_hojadevida` (
   `Oid` int(11) NOT NULL,
   `Fk_tblAspirante` int(11) NOT NULL,
-  `Hv_institucion_bachiller` int(50) NOT NULL,
-  `Hv_ciudad_bachiller` int(50) NOT NULL,
+  `Hv_institucion_bachiller` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Hv_ciudad_bachiller` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Hv_año_bachiller` int(4) NOT NULL,
   `Hv_tipo_titulo_bachiller` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Hv_Nombre_completo_padre` varchar(90) COLLATE utf8_spanish_ci NOT NULL,
@@ -644,7 +645,7 @@ CREATE TABLE `tbl_hojadevida` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_investigaciones_emf`
+-- Estructura de tabla para la tabla `tbl_investigaciones_emf`
 --
 
 CREATE TABLE `tbl_investigaciones_emf` (
@@ -658,7 +659,7 @@ CREATE TABLE `tbl_investigaciones_emf` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_investigacion_x_at`
+-- Estructura de tabla para la tabla `tbl_investigacion_x_at`
 --
 
 CREATE TABLE `tbl_investigacion_x_at` (
@@ -676,7 +677,7 @@ CREATE TABLE `tbl_investigacion_x_at` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_invest_x_tipointer_emf`
+-- Estructura de tabla para la tabla `tbl_invest_x_tipointer_emf`
 --
 
 CREATE TABLE `tbl_invest_x_tipointer_emf` (
@@ -689,7 +690,7 @@ CREATE TABLE `tbl_invest_x_tipointer_emf` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_persona`
+-- Estructura de tabla para la tabla `tbl_persona`
 --
 
 CREATE TABLE `tbl_persona` (
@@ -719,7 +720,7 @@ CREATE TABLE `tbl_persona` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_personal_apoyo`
+-- Estructura de tabla para la tabla `tbl_personal_apoyo`
 --
 
 CREATE TABLE `tbl_personal_apoyo` (
@@ -733,7 +734,7 @@ CREATE TABLE `tbl_personal_apoyo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_postulacion`
+-- Estructura de tabla para la tabla `tbl_postulacion`
 --
 
 CREATE TABLE `tbl_postulacion` (
@@ -747,7 +748,7 @@ CREATE TABLE `tbl_postulacion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_reintegro`
+-- Estructura de tabla para la tabla `tbl_reintegro`
 --
 
 CREATE TABLE `tbl_reintegro` (
@@ -771,7 +772,7 @@ CREATE TABLE `tbl_reintegro` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_reintegro_x_diagx`
+-- Estructura de tabla para la tabla `tbl_reintegro_x_diagx`
 --
 
 CREATE TABLE `tbl_reintegro_x_diagx` (
@@ -785,7 +786,7 @@ CREATE TABLE `tbl_reintegro_x_diagx` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_reintegro_x_labor`
+-- Estructura de tabla para la tabla `tbl_reintegro_x_labor`
 --
 
 CREATE TABLE `tbl_reintegro_x_labor` (
@@ -798,7 +799,7 @@ CREATE TABLE `tbl_reintegro_x_labor` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_testigo`
+-- Estructura de tabla para la tabla `tbl_testigo`
 --
 
 CREATE TABLE `tbl_testigo` (
@@ -813,7 +814,7 @@ CREATE TABLE `tbl_testigo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_usuario`
+-- Estructura de tabla para la tabla `tbl_usuario`
 --
 
 CREATE TABLE `tbl_usuario` (
@@ -828,7 +829,7 @@ CREATE TABLE `tbl_usuario` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_vacante`
+-- Estructura de tabla para la tabla `tbl_vacante`
 --
 
 CREATE TABLE `tbl_vacante` (
@@ -842,226 +843,226 @@ CREATE TABLE `tbl_vacante` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `d_tbl_apoyo`
+-- Indices de la tabla `d_tbl_apoyo`
 --
 ALTER TABLE `d_tbl_apoyo`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_calificador`
+-- Indices de la tabla `d_tbl_calificador`
 --
 ALTER TABLE `d_tbl_calificador`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_caracter`
+-- Indices de la tabla `d_tbl_caracter`
 --
 ALTER TABLE `d_tbl_caracter`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_causas`
+-- Indices de la tabla `d_tbl_causas`
 --
 ALTER TABLE `d_tbl_causas`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_cursos`
+-- Indices de la tabla `d_tbl_cursos`
 --
 ALTER TABLE `d_tbl_cursos`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblHojadevida` (`Fk_tblHojadevida`);
 
 --
--- Indexes for table `d_tbl_departamento`
+-- Indices de la tabla `d_tbl_departamento`
 --
 ALTER TABLE `d_tbl_departamento`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_estado`
+-- Indices de la tabla `d_tbl_estado`
 --
 ALTER TABLE `d_tbl_estado`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_fuentelesion`
+-- Indices de la tabla `d_tbl_fuentelesion`
 --
 ALTER TABLE `d_tbl_fuentelesion`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_grupo`
+-- Indices de la tabla `d_tbl_grupo`
 --
 ALTER TABLE `d_tbl_grupo`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_hijo`
+-- Indices de la tabla `d_tbl_hijo`
 --
 ALTER TABLE `d_tbl_hijo`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblAspirante` (`Fk_tblAspirante`);
 
 --
--- Indexes for table `d_tbl_intervencion`
+-- Indices de la tabla `d_tbl_intervencion`
 --
 ALTER TABLE `d_tbl_intervencion`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_jornadalaboral`
+-- Indices de la tabla `d_tbl_jornadalaboral`
 --
 ALTER TABLE `d_tbl_jornadalaboral`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_labores`
+-- Indices de la tabla `d_tbl_labores`
 --
 ALTER TABLE `d_tbl_labores`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_laborhabitual`
+-- Indices de la tabla `d_tbl_laborhabitual`
 --
 ALTER TABLE `d_tbl_laborhabitual`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_lugarat`
+-- Indices de la tabla `d_tbl_lugarat`
 --
 ALTER TABLE `d_tbl_lugarat`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_mecanismoat`
+-- Indices de la tabla `d_tbl_mecanismoat`
 --
 ALTER TABLE `d_tbl_mecanismoat`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_modpuesto`
+-- Indices de la tabla `d_tbl_modpuesto`
 --
 ALTER TABLE `d_tbl_modpuesto`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_municipio`
+-- Indices de la tabla `d_tbl_municipio`
 --
 ALTER TABLE `d_tbl_municipio`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_origen`
+-- Indices de la tabla `d_tbl_origen`
 --
 ALTER TABLE `d_tbl_origen`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_parteafectada`
+-- Indices de la tabla `d_tbl_parteafectada`
 --
 ALTER TABLE `d_tbl_parteafectada`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_partecuerpo`
+-- Indices de la tabla `d_tbl_partecuerpo`
 --
 ALTER TABLE `d_tbl_partecuerpo`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_perfilapoyo`
+-- Indices de la tabla `d_tbl_perfilapoyo`
 --
 ALTER TABLE `d_tbl_perfilapoyo`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_dApoyo` (`Fk_dApoyo`);
 
 --
--- Indexes for table `d_tbl_posgrado`
+-- Indices de la tabla `d_tbl_posgrado`
 --
 ALTER TABLE `d_tbl_posgrado`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblHojadevida` (`Fk_tblHojadevida`);
 
 --
--- Indexes for table `d_tbl_pregrado`
+-- Indices de la tabla `d_tbl_pregrado`
 --
 ALTER TABLE `d_tbl_pregrado`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblHojadevida` (`Fk_tblHojadevida`);
 
 --
--- Indexes for table `d_tbl_razonsocial`
+-- Indices de la tabla `d_tbl_razonsocial`
 --
 ALTER TABLE `d_tbl_razonsocial`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_riesgo`
+-- Indices de la tabla `d_tbl_riesgo`
 --
 ALTER TABLE `d_tbl_riesgo`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_rol`
+-- Indices de la tabla `d_tbl_rol`
 --
 ALTER TABLE `d_tbl_rol`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_segmento`
+-- Indices de la tabla `d_tbl_segmento`
 --
 ALTER TABLE `d_tbl_segmento`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_tipoat`
+-- Indices de la tabla `d_tbl_tipoat`
 --
 ALTER TABLE `d_tbl_tipoat`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_tipoaus`
+-- Indices de la tabla `d_tbl_tipoaus`
 --
 ALTER TABLE `d_tbl_tipoaus`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_tipocausa`
+-- Indices de la tabla `d_tbl_tipocausa`
 --
 ALTER TABLE `d_tbl_tipocausa`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_tipocierre`
+-- Indices de la tabla `d_tbl_tipocierre`
 --
 ALTER TABLE `d_tbl_tipocierre`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_tipocontrol`
+-- Indices de la tabla `d_tbl_tipocontrol`
 --
 ALTER TABLE `d_tbl_tipocontrol`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_tipolesion`
+-- Indices de la tabla `d_tbl_tipolesion`
 --
 ALTER TABLE `d_tbl_tipolesion`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `d_tbl_zonaat`
+-- Indices de la tabla `d_tbl_zonaat`
 --
 ALTER TABLE `d_tbl_zonaat`
   ADD PRIMARY KEY (`Oid`);
 
 --
--- Indexes for table `tbl_accidente`
+-- Indices de la tabla `tbl_accidente`
 --
 ALTER TABLE `tbl_accidente`
   ADD PRIMARY KEY (`Oid`),
@@ -1079,14 +1080,14 @@ ALTER TABLE `tbl_accidente`
   ADD KEY `Fk_dJorlab` (`Fk_dJorlab`);
 
 --
--- Indexes for table `tbl_aspirante`
+-- Indices de la tabla `tbl_aspirante`
 --
 ALTER TABLE `tbl_aspirante`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_dMunicipio` (`Fk_dMunicipio`);
 
 --
--- Indexes for table `tbl_ausentismo`
+-- Indices de la tabla `tbl_ausentismo`
 --
 ALTER TABLE `tbl_ausentismo`
   ADD PRIMARY KEY (`Oid`),
@@ -1096,7 +1097,7 @@ ALTER TABLE `tbl_ausentismo`
   ADD KEY `Fk_tblDiagx` (`Fk_tblDiagx`);
 
 --
--- Indexes for table `tbl_calificaciones`
+-- Indices de la tabla `tbl_calificaciones`
 --
 ALTER TABLE `tbl_calificaciones`
   ADD PRIMARY KEY (`Oid`),
@@ -1106,13 +1107,13 @@ ALTER TABLE `tbl_calificaciones`
   ADD KEY `Fk_tblPersona` (`Fk_tblPersona`);
 
 --
--- Indexes for table `tbl_centrotrabajo`
+-- Indices de la tabla `tbl_centrotrabajo`
 --
 ALTER TABLE `tbl_centrotrabajo`
   ADD PRIMARY KEY (`Ibm`);
 
 --
--- Indexes for table `tbl_cierre_reintegros`
+-- Indices de la tabla `tbl_cierre_reintegros`
 --
 ALTER TABLE `tbl_cierre_reintegros`
   ADD PRIMARY KEY (`Oid`),
@@ -1121,7 +1122,7 @@ ALTER TABLE `tbl_cierre_reintegros`
   ADD KEY `Fk_tblReintegro` (`Fk_tblReintegro`);
 
 --
--- Indexes for table `tbl_diagnostico`
+-- Indices de la tabla `tbl_diagnostico`
 --
 ALTER TABLE `tbl_diagnostico`
   ADD PRIMARY KEY (`Oid`),
@@ -1130,7 +1131,7 @@ ALTER TABLE `tbl_diagnostico`
   ADD KEY `Fk_dSegmento` (`Fk_dSegmento`);
 
 --
--- Indexes for table `tbl_enfermedadeslaborales`
+-- Indices de la tabla `tbl_enfermedadeslaborales`
 --
 ALTER TABLE `tbl_enfermedadeslaborales`
   ADD PRIMARY KEY (`Oid`),
@@ -1142,21 +1143,21 @@ ALTER TABLE `tbl_enfermedadeslaborales`
   ADD KEY `Fk_tblFinca` (`Fk_tblCentroTrabajo`);
 
 --
--- Indexes for table `tbl_hojadevida`
+-- Indices de la tabla `tbl_hojadevida`
 --
 ALTER TABLE `tbl_hojadevida`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblPersona` (`Fk_tblAspirante`);
 
 --
--- Indexes for table `tbl_investigaciones_emf`
+-- Indices de la tabla `tbl_investigaciones_emf`
 --
 ALTER TABLE `tbl_investigaciones_emf`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblEnfermedad` (`Fk_tblEnfermedad`);
 
 --
--- Indexes for table `tbl_investigacion_x_at`
+-- Indices de la tabla `tbl_investigacion_x_at`
 --
 ALTER TABLE `tbl_investigacion_x_at`
   ADD PRIMARY KEY (`Oid`),
@@ -1165,7 +1166,7 @@ ALTER TABLE `tbl_investigacion_x_at`
   ADD KEY `Fk_dTipocontrol` (`Fk_dTipocontrol`);
 
 --
--- Indexes for table `tbl_invest_x_tipointer_emf`
+-- Indices de la tabla `tbl_invest_x_tipointer_emf`
 --
 ALTER TABLE `tbl_invest_x_tipointer_emf`
   ADD PRIMARY KEY (`Oid`),
@@ -1173,7 +1174,7 @@ ALTER TABLE `tbl_invest_x_tipointer_emf`
   ADD KEY `Fk_dTipoInter` (`Fk_dTipoInter`);
 
 --
--- Indexes for table `tbl_persona`
+-- Indices de la tabla `tbl_persona`
 --
 ALTER TABLE `tbl_persona`
   ADD PRIMARY KEY (`Oid`),
@@ -1181,7 +1182,7 @@ ALTER TABLE `tbl_persona`
   ADD KEY `Fk_tblCentroTrabajo` (`Fk_tblCentroTrabajo`);
 
 --
--- Indexes for table `tbl_personal_apoyo`
+-- Indices de la tabla `tbl_personal_apoyo`
 --
 ALTER TABLE `tbl_personal_apoyo`
   ADD PRIMARY KEY (`Oid`),
@@ -1191,7 +1192,7 @@ ALTER TABLE `tbl_personal_apoyo`
   ADD KEY `Fk_dEstado` (`Fk_dEstado`);
 
 --
--- Indexes for table `tbl_postulacion`
+-- Indices de la tabla `tbl_postulacion`
 --
 ALTER TABLE `tbl_postulacion`
   ADD PRIMARY KEY (`Oid`),
@@ -1199,7 +1200,7 @@ ALTER TABLE `tbl_postulacion`
   ADD KEY `Fk_tblVacante` (`Fk_tblVacante`);
 
 --
--- Indexes for table `tbl_reintegro`
+-- Indices de la tabla `tbl_reintegro`
 --
 ALTER TABLE `tbl_reintegro`
   ADD PRIMARY KEY (`Oid`),
@@ -1212,7 +1213,7 @@ ALTER TABLE `tbl_reintegro`
   ADD KEY `Fk_dCaracter` (`Fk_dCaracter`,`Rei_entidad`);
 
 --
--- Indexes for table `tbl_reintegro_x_diagx`
+-- Indices de la tabla `tbl_reintegro_x_diagx`
 --
 ALTER TABLE `tbl_reintegro_x_diagx`
   ADD PRIMARY KEY (`Oid`),
@@ -1220,7 +1221,7 @@ ALTER TABLE `tbl_reintegro_x_diagx`
   ADD KEY `Fk_tblDiagx` (`Fk_tblDiagx`);
 
 --
--- Indexes for table `tbl_reintegro_x_labor`
+-- Indices de la tabla `tbl_reintegro_x_labor`
 --
 ALTER TABLE `tbl_reintegro_x_labor`
   ADD PRIMARY KEY (`Oid`),
@@ -1228,14 +1229,14 @@ ALTER TABLE `tbl_reintegro_x_labor`
   ADD KEY `Fk_dLabores` (`Fk_dLabores`);
 
 --
--- Indexes for table `tbl_testigo`
+-- Indices de la tabla `tbl_testigo`
 --
 ALTER TABLE `tbl_testigo`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblAccidente` (`Fk_tblAccidente`);
 
 --
--- Indexes for table `tbl_usuario`
+-- Indices de la tabla `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
   ADD PRIMARY KEY (`Oid`),
@@ -1243,382 +1244,382 @@ ALTER TABLE `tbl_usuario`
   ADD KEY `Fk_dRol` (`Fk_dRol`);
 
 --
--- Indexes for table `tbl_vacante`
+-- Indices de la tabla `tbl_vacante`
 --
 ALTER TABLE `tbl_vacante`
   ADD PRIMARY KEY (`Oid`),
   ADD KEY `Fk_tblUsuario` (`Fk_tblUsuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `d_tbl_apoyo`
+-- AUTO_INCREMENT de la tabla `d_tbl_apoyo`
 --
 ALTER TABLE `d_tbl_apoyo`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_calificador`
+-- AUTO_INCREMENT de la tabla `d_tbl_calificador`
 --
 ALTER TABLE `d_tbl_calificador`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_caracter`
+-- AUTO_INCREMENT de la tabla `d_tbl_caracter`
 --
 ALTER TABLE `d_tbl_caracter`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_causas`
+-- AUTO_INCREMENT de la tabla `d_tbl_causas`
 --
 ALTER TABLE `d_tbl_causas`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_cursos`
+-- AUTO_INCREMENT de la tabla `d_tbl_cursos`
 --
 ALTER TABLE `d_tbl_cursos`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_departamento`
+-- AUTO_INCREMENT de la tabla `d_tbl_departamento`
 --
 ALTER TABLE `d_tbl_departamento`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_estado`
+-- AUTO_INCREMENT de la tabla `d_tbl_estado`
 --
 ALTER TABLE `d_tbl_estado`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_fuentelesion`
+-- AUTO_INCREMENT de la tabla `d_tbl_fuentelesion`
 --
 ALTER TABLE `d_tbl_fuentelesion`
   MODIFY `Oid` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_grupo`
+-- AUTO_INCREMENT de la tabla `d_tbl_grupo`
 --
 ALTER TABLE `d_tbl_grupo`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_hijo`
+-- AUTO_INCREMENT de la tabla `d_tbl_hijo`
 --
 ALTER TABLE `d_tbl_hijo`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_intervencion`
+-- AUTO_INCREMENT de la tabla `d_tbl_intervencion`
 --
 ALTER TABLE `d_tbl_intervencion`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_jornadalaboral`
+-- AUTO_INCREMENT de la tabla `d_tbl_jornadalaboral`
 --
 ALTER TABLE `d_tbl_jornadalaboral`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_labores`
+-- AUTO_INCREMENT de la tabla `d_tbl_labores`
 --
 ALTER TABLE `d_tbl_labores`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_laborhabitual`
+-- AUTO_INCREMENT de la tabla `d_tbl_laborhabitual`
 --
 ALTER TABLE `d_tbl_laborhabitual`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_lugarat`
+-- AUTO_INCREMENT de la tabla `d_tbl_lugarat`
 --
 ALTER TABLE `d_tbl_lugarat`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_mecanismoat`
+-- AUTO_INCREMENT de la tabla `d_tbl_mecanismoat`
 --
 ALTER TABLE `d_tbl_mecanismoat`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_modpuesto`
+-- AUTO_INCREMENT de la tabla `d_tbl_modpuesto`
 --
 ALTER TABLE `d_tbl_modpuesto`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_municipio`
+-- AUTO_INCREMENT de la tabla `d_tbl_municipio`
 --
 ALTER TABLE `d_tbl_municipio`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_origen`
+-- AUTO_INCREMENT de la tabla `d_tbl_origen`
 --
 ALTER TABLE `d_tbl_origen`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_parteafectada`
+-- AUTO_INCREMENT de la tabla `d_tbl_parteafectada`
 --
 ALTER TABLE `d_tbl_parteafectada`
   MODIFY `Oid` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_partecuerpo`
+-- AUTO_INCREMENT de la tabla `d_tbl_partecuerpo`
 --
 ALTER TABLE `d_tbl_partecuerpo`
   MODIFY `Oid` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_perfilapoyo`
+-- AUTO_INCREMENT de la tabla `d_tbl_perfilapoyo`
 --
 ALTER TABLE `d_tbl_perfilapoyo`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_posgrado`
+-- AUTO_INCREMENT de la tabla `d_tbl_posgrado`
 --
 ALTER TABLE `d_tbl_posgrado`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_pregrado`
+-- AUTO_INCREMENT de la tabla `d_tbl_pregrado`
 --
 ALTER TABLE `d_tbl_pregrado`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_razonsocial`
+-- AUTO_INCREMENT de la tabla `d_tbl_razonsocial`
 --
 ALTER TABLE `d_tbl_razonsocial`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_riesgo`
+-- AUTO_INCREMENT de la tabla `d_tbl_riesgo`
 --
 ALTER TABLE `d_tbl_riesgo`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_rol`
+-- AUTO_INCREMENT de la tabla `d_tbl_rol`
 --
 ALTER TABLE `d_tbl_rol`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_segmento`
+-- AUTO_INCREMENT de la tabla `d_tbl_segmento`
 --
 ALTER TABLE `d_tbl_segmento`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_tipoat`
+-- AUTO_INCREMENT de la tabla `d_tbl_tipoat`
 --
 ALTER TABLE `d_tbl_tipoat`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_tipoaus`
+-- AUTO_INCREMENT de la tabla `d_tbl_tipoaus`
 --
 ALTER TABLE `d_tbl_tipoaus`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_tipocausa`
+-- AUTO_INCREMENT de la tabla `d_tbl_tipocausa`
 --
 ALTER TABLE `d_tbl_tipocausa`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_tipocierre`
+-- AUTO_INCREMENT de la tabla `d_tbl_tipocierre`
 --
 ALTER TABLE `d_tbl_tipocierre`
   MODIFY `Oid` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_tipocontrol`
+-- AUTO_INCREMENT de la tabla `d_tbl_tipocontrol`
 --
 ALTER TABLE `d_tbl_tipocontrol`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_tipolesion`
+-- AUTO_INCREMENT de la tabla `d_tbl_tipolesion`
 --
 ALTER TABLE `d_tbl_tipolesion`
   MODIFY `Oid` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `d_tbl_zonaat`
+-- AUTO_INCREMENT de la tabla `d_tbl_zonaat`
 --
 ALTER TABLE `d_tbl_zonaat`
   MODIFY `Oid` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_accidente`
+-- AUTO_INCREMENT de la tabla `tbl_accidente`
 --
 ALTER TABLE `tbl_accidente`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_aspirante`
+-- AUTO_INCREMENT de la tabla `tbl_aspirante`
 --
 ALTER TABLE `tbl_aspirante`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_ausentismo`
+-- AUTO_INCREMENT de la tabla `tbl_ausentismo`
 --
 ALTER TABLE `tbl_ausentismo`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_calificaciones`
+-- AUTO_INCREMENT de la tabla `tbl_calificaciones`
 --
 ALTER TABLE `tbl_calificaciones`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_cierre_reintegros`
+-- AUTO_INCREMENT de la tabla `tbl_cierre_reintegros`
 --
 ALTER TABLE `tbl_cierre_reintegros`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_diagnostico`
+-- AUTO_INCREMENT de la tabla `tbl_diagnostico`
 --
 ALTER TABLE `tbl_diagnostico`
   MODIFY `Oid` int(6) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_enfermedadeslaborales`
+-- AUTO_INCREMENT de la tabla `tbl_enfermedadeslaborales`
 --
 ALTER TABLE `tbl_enfermedadeslaborales`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_hojadevida`
+-- AUTO_INCREMENT de la tabla `tbl_hojadevida`
 --
 ALTER TABLE `tbl_hojadevida`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_investigaciones_emf`
+-- AUTO_INCREMENT de la tabla `tbl_investigaciones_emf`
 --
 ALTER TABLE `tbl_investigaciones_emf`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_investigacion_x_at`
+-- AUTO_INCREMENT de la tabla `tbl_investigacion_x_at`
 --
 ALTER TABLE `tbl_investigacion_x_at`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_invest_x_tipointer_emf`
+-- AUTO_INCREMENT de la tabla `tbl_invest_x_tipointer_emf`
 --
 ALTER TABLE `tbl_invest_x_tipointer_emf`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_persona`
+-- AUTO_INCREMENT de la tabla `tbl_persona`
 --
 ALTER TABLE `tbl_persona`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_personal_apoyo`
+-- AUTO_INCREMENT de la tabla `tbl_personal_apoyo`
 --
 ALTER TABLE `tbl_personal_apoyo`
   MODIFY `Oid` int(6) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_postulacion`
+-- AUTO_INCREMENT de la tabla `tbl_postulacion`
 --
 ALTER TABLE `tbl_postulacion`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_reintegro`
+-- AUTO_INCREMENT de la tabla `tbl_reintegro`
 --
 ALTER TABLE `tbl_reintegro`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_reintegro_x_diagx`
+-- AUTO_INCREMENT de la tabla `tbl_reintegro_x_diagx`
 --
 ALTER TABLE `tbl_reintegro_x_diagx`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_reintegro_x_labor`
+-- AUTO_INCREMENT de la tabla `tbl_reintegro_x_labor`
 --
 ALTER TABLE `tbl_reintegro_x_labor`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_testigo`
+-- AUTO_INCREMENT de la tabla `tbl_testigo`
 --
 ALTER TABLE `tbl_testigo`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_usuario`
+-- AUTO_INCREMENT de la tabla `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_vacante`
+-- AUTO_INCREMENT de la tabla `tbl_vacante`
 --
 ALTER TABLE `tbl_vacante`
   MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `d_tbl_cursos`
+-- Filtros para la tabla `d_tbl_cursos`
 --
 ALTER TABLE `d_tbl_cursos`
   ADD CONSTRAINT `d_tbl_cursos_ibfk_1` FOREIGN KEY (`Fk_tblHojadevida`) REFERENCES `tbl_hojadevida` (`Oid`);
 
 --
--- Constraints for table `d_tbl_hijo`
+-- Filtros para la tabla `d_tbl_hijo`
 --
 ALTER TABLE `d_tbl_hijo`
   ADD CONSTRAINT `d_tbl_hijo_ibfk_1` FOREIGN KEY (`Fk_tblAspirante`) REFERENCES `tbl_aspirante` (`Oid`);
 
 --
--- Constraints for table `d_tbl_perfilapoyo`
+-- Filtros para la tabla `d_tbl_perfilapoyo`
 --
 ALTER TABLE `d_tbl_perfilapoyo`
   ADD CONSTRAINT `d_tbl_perfilapoyo_ibfk_1` FOREIGN KEY (`Fk_dApoyo`) REFERENCES `d_tbl_apoyo` (`Oid`);
 
 --
--- Constraints for table `d_tbl_posgrado`
+-- Filtros para la tabla `d_tbl_posgrado`
 --
 ALTER TABLE `d_tbl_posgrado`
   ADD CONSTRAINT `d_tbl_posgrado_ibfk_1` FOREIGN KEY (`Fk_tblHojadevida`) REFERENCES `tbl_hojadevida` (`Oid`);
 
 --
--- Constraints for table `d_tbl_pregrado`
+-- Filtros para la tabla `d_tbl_pregrado`
 --
 ALTER TABLE `d_tbl_pregrado`
   ADD CONSTRAINT `d_tbl_pregrado_ibfk_1` FOREIGN KEY (`Fk_tblHojadevida`) REFERENCES `tbl_hojadevida` (`Oid`);
 
 --
--- Constraints for table `tbl_accidente`
+-- Filtros para la tabla `tbl_accidente`
 --
 ALTER TABLE `tbl_accidente`
   ADD CONSTRAINT `tbl_accidente_ibfk_1` FOREIGN KEY (`Fk_tblPersona`) REFERENCES `tbl_persona` (`Oid`),
@@ -1634,13 +1635,13 @@ ALTER TABLE `tbl_accidente`
   ADD CONSTRAINT `tbl_accidente_ibfk_9` FOREIGN KEY (`Fk_dParteafectada`) REFERENCES `d_tbl_parteafectada` (`Oid`);
 
 --
--- Constraints for table `tbl_aspirante`
+-- Filtros para la tabla `tbl_aspirante`
 --
 ALTER TABLE `tbl_aspirante`
   ADD CONSTRAINT `tbl_aspirante_ibfk_1` FOREIGN KEY (`Fk_dMunicipio`) REFERENCES `d_tbl_municipio` (`Oid`);
 
 --
--- Constraints for table `tbl_ausentismo`
+-- Filtros para la tabla `tbl_ausentismo`
 --
 ALTER TABLE `tbl_ausentismo`
   ADD CONSTRAINT `tbl_ausentismo_ibfk_1` FOREIGN KEY (`Fk_tblDiagx`) REFERENCES `tbl_diagnostico` (`Oid`),
@@ -1649,7 +1650,7 @@ ALTER TABLE `tbl_ausentismo`
   ADD CONSTRAINT `tbl_ausentismo_ibfk_4` FOREIGN KEY (`Fk_dTipoaus`) REFERENCES `d_tbl_tipoaus` (`Oid`);
 
 --
--- Constraints for table `tbl_calificaciones`
+-- Filtros para la tabla `tbl_calificaciones`
 --
 ALTER TABLE `tbl_calificaciones`
   ADD CONSTRAINT `tbl_calificaciones_ibfk_1` FOREIGN KEY (`Fk_tblCentroTrabajo`) REFERENCES `tbl_centrotrabajo` (`Ibm`),
@@ -1658,7 +1659,7 @@ ALTER TABLE `tbl_calificaciones`
   ADD CONSTRAINT `tbl_calificaciones_ibfk_4` FOREIGN KEY (`Fk_dOrigen`) REFERENCES `d_tbl_origen` (`Oid`);
 
 --
--- Constraints for table `tbl_cierre_reintegros`
+-- Filtros para la tabla `tbl_cierre_reintegros`
 --
 ALTER TABLE `tbl_cierre_reintegros`
   ADD CONSTRAINT `tbl_cierre_reintegros_ibfk_1` FOREIGN KEY (`Fk_tblReintegro`) REFERENCES `tbl_reintegro` (`Oid`),
@@ -1666,7 +1667,7 @@ ALTER TABLE `tbl_cierre_reintegros`
   ADD CONSTRAINT `tbl_cierre_reintegros_ibfk_3` FOREIGN KEY (`Fk_dTipocierre`) REFERENCES `d_tbl_tipocierre` (`Oid`);
 
 --
--- Constraints for table `tbl_diagnostico`
+-- Filtros para la tabla `tbl_diagnostico`
 --
 ALTER TABLE `tbl_diagnostico`
   ADD CONSTRAINT `tbl_diagnostico_ibfk_1` FOREIGN KEY (`Fk_dGrupo`) REFERENCES `d_tbl_grupo` (`Oid`),
@@ -1674,7 +1675,7 @@ ALTER TABLE `tbl_diagnostico`
   ADD CONSTRAINT `tbl_diagnostico_ibfk_3` FOREIGN KEY (`Fk_dSegmento`) REFERENCES `d_tbl_segmento` (`Oid`);
 
 --
--- Constraints for table `tbl_enfermedadeslaborales`
+-- Filtros para la tabla `tbl_enfermedadeslaborales`
 --
 ALTER TABLE `tbl_enfermedadeslaborales`
   ADD CONSTRAINT `tbl_enfermedadeslaborales_ibfk_1` FOREIGN KEY (`Fk_tblDiagx`) REFERENCES `tbl_diagnostico` (`Oid`),
@@ -1685,19 +1686,19 @@ ALTER TABLE `tbl_enfermedadeslaborales`
   ADD CONSTRAINT `tbl_enfermedadeslaborales_ibfk_6` FOREIGN KEY (`Fk_tblPersona`) REFERENCES `tbl_persona` (`Oid`);
 
 --
--- Constraints for table `tbl_hojadevida`
+-- Filtros para la tabla `tbl_hojadevida`
 --
 ALTER TABLE `tbl_hojadevida`
   ADD CONSTRAINT `tbl_hojadevida_ibfk_1` FOREIGN KEY (`Fk_tblAspirante`) REFERENCES `tbl_aspirante` (`Oid`);
 
 --
--- Constraints for table `tbl_investigaciones_emf`
+-- Filtros para la tabla `tbl_investigaciones_emf`
 --
 ALTER TABLE `tbl_investigaciones_emf`
   ADD CONSTRAINT `tbl_investigaciones_emf_ibfk_1` FOREIGN KEY (`Fk_tblEnfermedad`) REFERENCES `tbl_enfermedadeslaborales` (`Oid`);
 
 --
--- Constraints for table `tbl_investigacion_x_at`
+-- Filtros para la tabla `tbl_investigacion_x_at`
 --
 ALTER TABLE `tbl_investigacion_x_at`
   ADD CONSTRAINT `tbl_investigacion_x_at_ibfk_1` FOREIGN KEY (`Fk_tblAccidente`) REFERENCES `tbl_accidente` (`Oid`),
@@ -1705,21 +1706,21 @@ ALTER TABLE `tbl_investigacion_x_at`
   ADD CONSTRAINT `tbl_investigacion_x_at_ibfk_3` FOREIGN KEY (`Fk_dTipocontrol`) REFERENCES `d_tbl_tipocontrol` (`Oid`);
 
 --
--- Constraints for table `tbl_invest_x_tipointer_emf`
+-- Filtros para la tabla `tbl_invest_x_tipointer_emf`
 --
 ALTER TABLE `tbl_invest_x_tipointer_emf`
   ADD CONSTRAINT `tbl_invest_x_tipointer_emf_ibfk_1` FOREIGN KEY (`Fk_tblEnfermedad`) REFERENCES `tbl_enfermedadeslaborales` (`Oid`),
   ADD CONSTRAINT `tbl_invest_x_tipointer_emf_ibfk_2` FOREIGN KEY (`Fk_dTipoInter`) REFERENCES `d_tbl_intervencion` (`Oid`);
 
 --
--- Constraints for table `tbl_persona`
+-- Filtros para la tabla `tbl_persona`
 --
 ALTER TABLE `tbl_persona`
   ADD CONSTRAINT `tbl_persona_ibfk_1` FOREIGN KEY (`Fk_dEstado`) REFERENCES `d_tbl_estado` (`Oid`),
   ADD CONSTRAINT `tbl_persona_ibfk_2` FOREIGN KEY (`Fk_tblCentroTrabajo`) REFERENCES `tbl_centrotrabajo` (`Ibm`);
 
 --
--- Constraints for table `tbl_personal_apoyo`
+-- Filtros para la tabla `tbl_personal_apoyo`
 --
 ALTER TABLE `tbl_personal_apoyo`
   ADD CONSTRAINT `tbl_personal_apoyo_ibfk_1` FOREIGN KEY (`Fk_tblPersona`) REFERENCES `tbl_persona` (`Oid`),
@@ -1728,14 +1729,14 @@ ALTER TABLE `tbl_personal_apoyo`
   ADD CONSTRAINT `tbl_personal_apoyo_ibfk_4` FOREIGN KEY (`Fk_dEstado`) REFERENCES `d_tbl_estado` (`Oid`);
 
 --
--- Constraints for table `tbl_postulacion`
+-- Filtros para la tabla `tbl_postulacion`
 --
 ALTER TABLE `tbl_postulacion`
   ADD CONSTRAINT `tbl_postulacion_ibfk_1` FOREIGN KEY (`Fk_tblAspirante`) REFERENCES `tbl_aspirante` (`Oid`),
   ADD CONSTRAINT `tbl_postulacion_ibfk_2` FOREIGN KEY (`Fk_tblVacante`) REFERENCES `tbl_vacante` (`Oid`);
 
 --
--- Constraints for table `tbl_reintegro`
+-- Filtros para la tabla `tbl_reintegro`
 --
 ALTER TABLE `tbl_reintegro`
   ADD CONSTRAINT `tbl_reintegro_ibfk_1` FOREIGN KEY (`Fk_dCausa`) REFERENCES `d_tbl_causas` (`Oid`),
@@ -1747,34 +1748,34 @@ ALTER TABLE `tbl_reintegro`
   ADD CONSTRAINT `tbl_reintegro_ibfk_7` FOREIGN KEY (`Fk_tblCalificacion`) REFERENCES `tbl_calificaciones` (`Oid`);
 
 --
--- Constraints for table `tbl_reintegro_x_diagx`
+-- Filtros para la tabla `tbl_reintegro_x_diagx`
 --
 ALTER TABLE `tbl_reintegro_x_diagx`
   ADD CONSTRAINT `tbl_reintegro_x_diagx_ibfk_1` FOREIGN KEY (`Fk_tblReintegro`) REFERENCES `tbl_reintegro` (`Oid`),
   ADD CONSTRAINT `tbl_reintegro_x_diagx_ibfk_2` FOREIGN KEY (`Fk_tblDiagx`) REFERENCES `tbl_diagnostico` (`Oid`);
 
 --
--- Constraints for table `tbl_reintegro_x_labor`
+-- Filtros para la tabla `tbl_reintegro_x_labor`
 --
 ALTER TABLE `tbl_reintegro_x_labor`
   ADD CONSTRAINT `tbl_reintegro_x_labor_ibfk_1` FOREIGN KEY (`Fk_dLabores`) REFERENCES `d_tbl_labores` (`Oid`),
   ADD CONSTRAINT `tbl_reintegro_x_labor_ibfk_2` FOREIGN KEY (`Fk_tblReintegro`) REFERENCES `tbl_reintegro` (`Oid`);
 
 --
--- Constraints for table `tbl_testigo`
+-- Filtros para la tabla `tbl_testigo`
 --
 ALTER TABLE `tbl_testigo`
   ADD CONSTRAINT `tbl_testigo_ibfk_1` FOREIGN KEY (`Fk_tblAccidente`) REFERENCES `tbl_accidente` (`Oid`);
 
 --
--- Constraints for table `tbl_usuario`
+-- Filtros para la tabla `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
   ADD CONSTRAINT `tbl_usuario_ibfk_1` FOREIGN KEY (`Fk_dRol`) REFERENCES `d_tbl_rol` (`Oid`),
   ADD CONSTRAINT `tbl_usuario_ibfk_2` FOREIGN KEY (`Fk_dRazonsocial`) REFERENCES `d_tbl_razonsocial` (`Oid`);
 
 --
--- Constraints for table `tbl_vacante`
+-- Filtros para la tabla `tbl_vacante`
 --
 ALTER TABLE `tbl_vacante`
   ADD CONSTRAINT `tbl_vacante_ibfk_1` FOREIGN KEY (`Fk_tblUsuario`) REFERENCES `tbl_usuario` (`Oid`);

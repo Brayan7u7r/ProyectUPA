@@ -3,7 +3,7 @@
 use App\Models\AspiranteModel;
 use CodeIgniter\RESTful\ResourceController;
 
-class Aspirentes extends ResourceController
+class Aspirantes extends ResourceController
 {
     public function __construct() 
     {
@@ -13,7 +13,7 @@ class Aspirentes extends ResourceController
     public function index()
     {
         $aspirantes = $this->model->findAll();
-        return $this->respond();
+        return $this->respond($aspirantes); 
     }
     
     public function create()

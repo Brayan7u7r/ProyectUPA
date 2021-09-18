@@ -22,10 +22,10 @@ class Aspirentes extends ResourceController
         {
             $aspirante = $this->request->getJSON();
             if($this->model->insert($aspirante)):
-                $cliente->Oid = $this->model->insertID();
+                $aspirante->Oid = $this->model->insertID();
                 return $this->respondCreated();
             else:
-                return $this->failValidationError($this->model->validation->listErrors());
+                return $this->failValidationErrors($this->model->validation->listErrors());
             endif;
         } catch (\Exception $e) 
         {
@@ -38,11 +38,11 @@ class Aspirentes extends ResourceController
         try 
         {
            if($id == null)
-                return $this->failValidationError("no se ha pasa un Id valido.");
+                return $this->failValidationErrors("no se ha pasa un Id valido.");
             $aspirante = $this->model->find($id);
 
             if($aspirante == null)
-                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id.);
+                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
 
             return $this->respond($aspirante);
             
@@ -57,19 +57,19 @@ class Aspirentes extends ResourceController
         try 
         {
            if($id == null)
-                return $this->failValidationError("no se ha pasa un Id valido.");
+                return $this->failValidationErrors("no se ha pasa un Id valido.");
             
             $aspirante_verified = $this->model->find($id);
               if($aspirante_verified == null)
-                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id.);
+                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
             
             $aspirante = $this->request->getJSON();
             
-            if($this->model->update($id, $aspirante));
+            if($this->model->update($id, $aspirante)):
                 $aspirante->Oid = $id;
                 return $this->respondUpdated($aspirante);
             else:
-                return $this->failValidationError($this->model->validation->listErrors());
+                return $this->failValidationErrors($this->model->validation->listErrors());
             endif;
 
         } catch (\Exception $e) 
@@ -83,17 +83,23 @@ class Aspirentes extends ResourceController
         try 
         {
            if($id == null)
-                return $this->failValidationError("no se ha pasado un Id valido.");
-            
+           {
+                return $this->failValidationErrors("no se ha pasado un Id valido.");
+           }
             $aspirante_verified = $this->model->find($id);
-              if($aspirante_verified == null)
-                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id.);
+
+            if($aspirante_verified == null)
+            {
+                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
+            }
             
-            if($this->model->delete($id));
+            if($this->model->delete($id)){
                 return $this->respondDeleted($aspirante_verified);
-            else:
+            }
+            else{
                 return $this->failServerError("No se ha podido eliminar el registro.");
-            endif;
+            }
+            
 
         } catch (\Exception $e) 
         {

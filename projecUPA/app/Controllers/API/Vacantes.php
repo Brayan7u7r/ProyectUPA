@@ -1,54 +1,53 @@
 <?php namespace App\Controllers\API;
 
-use App\Models\AspiranteModel;
+use App\Models\VacanteModel;
 use CodeIgniter\RESTful\ResourceController;
 
-class Aspirantes extends ResourceController
+class Vacantes extends ResourceController
 {
     public function __construct() 
     {
-        $this->model = $this->setModel(new AspiranteModel());
+        $this->model = $this->setModel(new VacanteModel());
     }
 
     public function index()
     {
-        $aspirantes = $this->model->findAll();
-        return $this->respond($aspirantes); 
+        $vacantes = $this->model->findAll();
+        return $this->respond($vacantes);
     }
-    
+
     public function create()
     {
         try 
         {
-            $aspirante = $this->request->getJSON();
-            if($this->model->insert($aspirante)):
-                $aspirante->Oid = $this->model->insertID();
+            $vacantes = $this->request->getJSON();
+            if($this->model->insert($vacantes)):
+                $vacantes->Oid = $this->model->insertID();
                 return $this->respondCreated();
             else:
                 return $this->failValidationErrors($this->model->validation->listErrors());
             endif;
+
         } catch (\Exception $e) 
         {
-            return $this->failServerError('Ha ocurrido un error en el servidor');
+            return $this->failServerError('Ha ocurrido un error en el servidor.');
         }
     }
 
-    public function edit($id = null)
-    {
-        try 
-        {
-           if($id == null)
-                return $this->failValidationErrors("no se ha pasado un Id valido.");
-            $aspirante = $this->model->find($id);
-
-            if($aspirante == null)
-                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
-
-            return $this->respond($aspirante);
+    public function edit($id = null){
+        try {
+            if($id == null)
+                return $this->failValidationErrors('No se ha pasado un Id valido.');
             
+            $vacantes = $this->model->find($id);
+            
+            if($vacantes == null)
+                return $this->failNotFound('No se ha encontrado una vacante con el ID: '.$id);
+            return $this->respond($vacantes);
+
         } catch (\Exception $e) 
         {
-            return $this->failServerError("Ha ocurrido un error en el servidor.");
+            return $this->failServerError('Ha ocurrido un error en el servidor.');
         }
     }
 
@@ -57,17 +56,17 @@ class Aspirantes extends ResourceController
         try 
         {
            if($id == null)
-                return $this->failValidationErrors("no se ha pasado un Id valido.");
+                return $this->failValidationErrors("no se ha pasa un Id valido.");
             
-            $aspirante_verified = $this->model->find($id);
-            if($aspirante_verified == null)
-                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
+            $vacante_verified = $this->model->find($id);
+              if($vacante_verified == null)
+                return $this->failNotFound('No se ha encontrado vacante con el id: '.$id);
             
-            $aspirante = $this->request->getJSON();
+            $vacante = $this->request->getJSON();
             
-            if($this->model->update($id, $aspirante)):
-                $aspirante->Oid = $id;
-                return $this->respondUpdated($aspirante);
+            if($this->model->update($id, $vacante)):
+                $vacante->Oid = $id;
+                return $this->respondUpdated($vacante);
             else:
                 return $this->failValidationErrors($this->model->validation->listErrors());
             endif;
@@ -86,15 +85,15 @@ class Aspirantes extends ResourceController
            {
                 return $this->failValidationErrors("no se ha pasado un Id valido.");
            }
-            $aspirante_verified = $this->model->find($id);
+            $vacante_verified = $this->model->find($id);
 
-            if($aspirante_verified == null)
+            if($vacante_verified == null)
             {
                 return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
             }
             
             if($this->model->delete($id)){
-                return $this->respondDeleted($aspirante_verified);
+                return $this->respondDeleted($vacante_verified);
             }
             else{
                 return $this->failServerError("No se ha podido eliminar el registro.");

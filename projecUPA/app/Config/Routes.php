@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\API\Vacantes;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -35,11 +37,26 @@ $routes->get('/', 'Home::index');
 
 //http://localhost:8080/api
 $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
+    # Rutas - Aspirantes
     $routes->get('aspirantes','Aspirantes::index');
     $routes->post('aspirantes/create','Aspirantes::create');
     $routes->get('aspirantes/edit/(:num)','Aspirantes::edit/$1');
     $routes->put('aspirantes/update/(:num)','Aspirantes::update/$1');
     $routes->delete('aspirantes/delete/(:num)','Aspirante::delete/$1');
+
+    #Rutas - Vacantes
+    $routes->get('vacantes','Vacantes::index');
+    $routes->post('vacantes/create', 'Vacantes::create');
+    $routes->get('vacantes/edit(:num)','Vacantes::edit/$1');
+    $routes->put('vacantes/update/(:num)','Vacantes::update/$1');
+    $routes->delete('vacantes/delete/(:num)','Vacantes::update/$1');
+
+    #Rutas - Postulaciones
+    $routes->get('postulaciones','Postulaciones::index');
+    $routes->post('postulaciones/create', 'Postulaciones::create');
+    $routes->get('postulaciones/edit/(:num)','Postulaciones::edit/$1');
+    $routes->put('postulaciones/update/(:num)','Postulaciones::update/$1');
+    $routes->delete('postulaciones/delete/(:num)','Postulaciones::delete/$1');
 });
 
 

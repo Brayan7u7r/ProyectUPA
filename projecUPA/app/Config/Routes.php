@@ -57,6 +57,9 @@ $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
     $routes->get('postulaciones/edit/(:num)','Postulaciones::edit/$1');
     $routes->put('postulaciones/update/(:num)','Postulaciones::update/$1');
     $routes->delete('postulaciones/delete/(:num)','Postulaciones::delete/$1');
+
+    #Rutas - Municipios
+    $routes->get('municipios','Municipios::index');
 });
 
 

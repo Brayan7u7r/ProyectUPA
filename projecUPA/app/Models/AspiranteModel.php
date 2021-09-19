@@ -31,7 +31,8 @@ class AspiranteModel extends Model
         'Asp_correo'    => 'required|valid_email',
         'Asp_telefono'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
         'Asp_estadocivil'    => 'required|alpha_space|min_lenght[10]|max_lenght[90]',
-        'Asp_sexo'    => 'required|alpha_space|min_lenght[1]|max_lenght[1]'
+        'Asp_sexo'    => 'required|alpha_space|min_lenght[1]|max_lenght[1]',
+        'Fk_dMunicipio' => 'required|inger'
     ];
    /* 
     protected $validationMessages = [

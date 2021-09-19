@@ -1,5 +1,6 @@
 <?php namespace App\Controllers\API;
 
+use App\Models\AspiranteModel;
 use App\Models\PostulacionModel;
 use CodeIgniter\RESTful\ResourceController;
 
@@ -103,7 +104,30 @@ class Postulaciones extends ResourceController
         } 
         catch (\Exception $e) 
         {
+            return $this->failServerError('Ha ocurrido un error en el servidor.');
+        }
+    }
 
+    public function getPostulacionesByAspirante($id = null)
+    {
+        try 
+        {
+            $modelAspirante = new AspiranteModel();
+
+            if($id == null)
+                return $this->failValidationErrors("no se ha pasado un Id valido.");
+            $aspirante = $modelAspirante->find($id);
+
+            if($aspirante == null)
+                return $this->failNotFound('No se ha encontrado un aspirante con el id: '.$id);
+
+            $postulaciones = $this->model->PostulacionesByAspirantes($id);
+
+            return $this->respond($postulaciones);
+            
+        } catch (\Exception $e) 
+        {
+            return $this->failServerError("Ha ocurrido un error en el servidor.");
         }
     }
 

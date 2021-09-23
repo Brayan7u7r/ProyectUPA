@@ -16,30 +16,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `sara_app`
---
-
-DELIMITER $$
---
--- Procedures
---
-CREATE DEFINER=`root`@`localhost` PROCEDURE `get_postulacionesByAspirante` (IN `Id_aspirante` INT)  BEGIN 
-SELECT
-tbl_postulacion.Oid as Id,
-tbl_postulacion.Pos_fecha as Date, 
-tbl_postulacion.Pos_estado as Status, 
-tbl_aspirante.Asp_nombrecompleto as Name, 
-tbl_vacante.Vac_cargo as Job 
-FROM `tbl_postulacion` 
-INNER JOIN tbl_aspirante on tbl_postulacion.Fk_tblAspirante = tbl_aspirante.Oid 
-INNER JOIN tbl_vacante on tbl_postulacion.Fk_tblVacante = tbl_vacante.Oid 
-WHERE tbl_aspirante.Oid = Id_aspirante; 
-END$$
-
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --

@@ -35,6 +35,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->post('/auth/login','Auth::login');
+
 //http://localhost:8080/api
 $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
     # Rutas - Aspirantes
@@ -43,6 +45,14 @@ $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
     $routes->get('aspirantes/edit/(:num)','Aspirantes::edit/$1');
     $routes->put('aspirantes/update/(:num)','Aspirantes::update/$1');
     $routes->delete('aspirantes/delete/(:num)','Aspirante::delete/$1');
+
+    #Rutas - Hoja De Vida
+    $routes->get('hv','Hv::index');
+    $routes->post('hv/create','Hv::create');
+    $routes->get('hv/edit/(:num)', 'Hv::edit/$1');
+    $routes->put('hv/update/(:num)', 'Hv::update/$1');
+    $routes->delete('hv/delete/(:num)', 'Hv::delete/$1');
+    $routes->get('hv/aspirantes/(:num)', 'Hv::getHvByAspirante/$1');
 
     #Rutas - Vacantes
     $routes->get('vacantes','Vacantes::index');
@@ -61,6 +71,7 @@ $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
 
     #Rutas - Municipios
     $routes->get('municipios','Municipios::index');
+
 });
 
 

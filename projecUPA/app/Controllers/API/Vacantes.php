@@ -3,6 +3,8 @@
 use App\Models\VacanteModel;
 use CodeIgniter\RESTful\ResourceController;
 
+Header('Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE'); //method allowed
+
 class Vacantes extends ResourceController
 {
     public function __construct() 

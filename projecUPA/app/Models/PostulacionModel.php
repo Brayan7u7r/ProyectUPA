@@ -1,6 +1,5 @@
 <?php namespace App\Models;
 
-use CodeIgniter\CLI\Console;
 use CodeIgniter\Model;
 
 class PostulacionModel extends Model

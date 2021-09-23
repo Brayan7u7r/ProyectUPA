@@ -2,12 +2,10 @@
 
 use CodeIgniter\Model;
 
-use function PHPSTORM_META\type;
-
 class MunicipioModel extends Model
 {
     protected $table            = 'd_tbl_municipio';
-    protected $primeryKey       = 'Oid';
+    protected $primaryKey       = 'Oid';
 
     protected $returnType       = 'array';
     protected $allowedFields    = ['Mun_descripcion'];

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 10:18 PM
+-- Generation Time: Sep 24, 2021 at 02:26 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -16,6 +16,42 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sara_app`
+--
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getUsuarios` ()  BEGIN
+SELECT * FROM tbl_usuario;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_postulacionesByAspirante` (IN `Id_aspirante` INT)  BEGIN 
+SELECT
+tbl_postulacion.Oid as Id,
+tbl_postulacion.Pos_fecha as Date, 
+tbl_postulacion.Pos_estado as Status, 
+tbl_aspirante.Asp_nombrecompleto as Name, 
+tbl_vacante.Vac_cargo as Job 
+FROM `tbl_postulacion` 
+INNER JOIN tbl_aspirante on tbl_postulacion.Fk_tblAspirante = tbl_aspirante.Oid 
+INNER JOIN tbl_vacante on tbl_postulacion.Fk_tblVacante = tbl_vacante.Oid 
+WHERE tbl_aspirante.Oid = Id_aspirante; 
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `login` (IN `usuario` VARCHAR(25), IN `pass` VARCHAR(50))  BEGIN
+SELECT
+tbl_usuario.Oid,
+tbl_usuario.Fk_dRol
+FROM tbl_usuario
+WHERE tbl_usuario.Usu_usuario = usuario and tbl_usuario.Usu_contrasenia = pass;
+END$$
+
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -854,7 +890,7 @@ CREATE TABLE `tbl_testigo` (
 CREATE TABLE `tbl_usuario` (
   `Oid` int(11) NOT NULL,
   `Usu_usuario` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `Usu_contrasenia` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
+  `Usu_contrasenia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Usu_correo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Fk_dRazonsocial` int(2) NOT NULL,
   `Fk_dRol` int(3) NOT NULL
@@ -889,7 +925,9 @@ CREATE TABLE `tbl_vacante` (
 
 INSERT INTO `tbl_vacante` (`Oid`, `Vac_fechafin`, `Vac_cargo`, `Vac_img_referencia`, `Vac_lugar_vacante`, `Vac_descripcion_requisitos`, `Fk_tblUsuario`) VALUES
 (1, '2021-09-30', 'Analista Sistemas', 'img.png', 'Apartadó', '2 años de experiencia', 1),
-(2, '2021-09-30', 'Panadero', 'jpeg.panadero', 'Chigorodó', 'Aptitud\r\nSaber hacer churros', 1);
+(2, '2021-09-30', 'Panadero', 'jpeg.panadero', 'Chigorodó', 'Aptitud,\nSaber hacer churros xd', 1),
+(3, '2021-09-30', 'Polinizador', 'gif.gif', 'Chigorodó', 'Disponibilidad Inmediata, 1 año experiencia, proactivo.', 1),
+(4, '2021-09-30', 'Barcadillero', 'barca.png', 'Apartadó', 'Bachiller académico, mayor de edad, JavaScript', 1);
 
 --
 -- Indexes for dumped tables
@@ -1625,13 +1663,13 @@ ALTER TABLE `tbl_testigo`
 -- AUTO_INCREMENT for table `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
-  MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_vacante`
 --
 ALTER TABLE `tbl_vacante`
-  MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

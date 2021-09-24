@@ -2,10 +2,15 @@
 
 use App\Models\UsuarioModel;
 use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\RESTful\ResourceController;
 
-class Auth extends BaseController
+class Auth extends ResourceController
 {
     use ResponseTrait;
+
+    public function __construct() {
+        $this->model = $this->setModel(new UsuarioModel());
+    }
 
     public function login()
     {
@@ -14,14 +19,16 @@ class Auth extends BaseController
             $username = $this->request->getPost('username');
             $password = $this->request->getPost('password');
 
-            $usuarioModel = new UsuarioModel();
-            $where = ['Usu_usuario' => $username, 'Usu_contrasenia' => $password];
-            $validateUsuario = $usuarioModel->where($where)->find();
-
-            if($validateUsuario == null){
-                return $this->failNotFound('Usuario y/o contraseña invalido.');
+            if($username != null && $password != null){
+                $user_log = $this->model->login($username, $password);
+                if($user_log == null){
+                    return $this->failNotFound('Credenciales invalidas');
+                }else{
+                    return $this->respond($user_log);
+                }
+            }else{
+                return $this->failNotFound('Credenciales invalidas');
             }
-            return $this->respond('Usuario encontrado');    
         } 
         catch (\Exception $e) 
         {

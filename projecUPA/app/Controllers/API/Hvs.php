@@ -56,7 +56,7 @@ class Hvs extends ResourceController
                 return $this->failValidationErrors('No se ha pasado un ID valido');    
             $hv_verified = $this->model->find($id);
             if($hv_verified == null)
-                return $this->failNotFound('Hoj de vida no encontrada.');
+                return $this->failNotFound('Hoja de vida no encontrada.');
             
             $hv = $this->request->getJSON();
 

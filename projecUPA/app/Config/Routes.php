@@ -39,6 +39,10 @@ $routes->post('/auth/login','Auth::login');
 
 //http://localhost:8080/api
 $routes->group('api',['namespace' => 'App\Controllers\API'], function($routes){
+    #Rutas - Usuario
+    $routes->get('usuarios','Usuarios::index');
+    $routes->post('usuarios/create','Usuarios::create');
+    
     # Rutas - Aspirantes
     $routes->get('aspirantes','Aspirantes::index');
     $routes->post('aspirantes/create','Aspirantes::create');

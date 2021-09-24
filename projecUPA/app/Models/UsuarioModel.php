@@ -4,15 +4,16 @@ use CodeIgniter\Model;
 
 class UsuarioModel extends Model
 {
-    protected $table            = 'tb_usuario';
+    protected $table            = 'tbl_usuario';
     protected $primaryKey       = 'Oid';
     
+    protected $returnType       = 'array';
     protected $allowedFields    = [
         'Usu_usuario',
         'Usu_contrasenia',
         'Usu_correo',
-        'Fk_dRazonsocial',
-        'Fk_dRol'
+        'Fk_dRazonsocial ',
+        'Fk_dRol '
     ];
 
     protected $validationRules  = [
@@ -24,4 +25,18 @@ class UsuarioModel extends Model
     ];
 
     protected $skipValidation = false;
+
+    public function login($username = null, $password = null){
+        $query = "CALL login('".$username."','".$password."')";
+        $query = $this->db->query($query);
+        return $query->getResultObject();
+    }
+
+    public function getUsuarios(){
+        $query = "CALL getUsuarios()";
+        $query = $this->db->query($query);
+        return $query->getResultArray();
+    }
+
+
 }

@@ -13,7 +13,9 @@ class VacanteModel extends Model
         'Vac_cargo',
         'Vac_img_referencia',
         'Vac_lugar_vacante',
-        'Vac_descripcion_requisitos',
+        'Vac_disponibilidad',
+        'Vac_experiencia',
+        'Vac_estudios',
         'Fk_TblUsuario'
     ];
     

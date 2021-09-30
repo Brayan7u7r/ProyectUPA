@@ -16,8 +16,8 @@ class Vacantes extends ResourceController
 
     public function index()
     {
-        $vacantes = $this->model->findAll();
-        return $this->respond($vacantes);
+        $data ['vacantes'] = $this->model->findAll();
+        return view('vacantes_view', $data);
     }
 
     public function create()

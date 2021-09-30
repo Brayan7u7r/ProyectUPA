@@ -192,9 +192,8 @@
 			}
 		}
 	</style>
-</head>
+</head>	
 <body>
-
 <!-- HEADER: MENU + HEROE SECTION -->
 <header>
 
